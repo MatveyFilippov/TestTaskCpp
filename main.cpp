@@ -87,6 +87,17 @@ int getSumOfMainDiagonal(int **matrix, const int size) {
     return sum;
 }
 
+/**
+ Enum для задания 2 (возможные варианты выбора для пользователя)
+ */
+enum UserChoicesForWorkers {
+    NEW,
+    DEL,
+    UPDATE,
+    PRINT
+};
+
+
 int main(int argc, const char * argv[]) {
     std::srand(static_cast<unsigned int>(time(nullptr)));  // Инициализация рандомайзера
     
@@ -134,6 +145,15 @@ int main(int argc, const char * argv[]) {
     delete[] ptr2mat_task1;  // Освобождение пямяти строк матрицы
     ptr2mat_task1 = nullptr;  // Удаление строк матрицы
     /* End of task1 */
+    
+    /* Task2 */
+    int user_choise;
+    do {
+        std::cout << "\n1. Add new worker\n2. Del worker\n3. Update worker\n4. Print workers\n";
+        user_choise = input<int>("Make your choise: ");
+        // TODO: закончить (я не успел)
+    } while (true);  // TODO: вставить условие для 'enum UserChoicesForWorkers'
+    /* End of task2 */
     
     return 0;
 }
